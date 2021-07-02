@@ -1,0 +1,10 @@
+:root {
+  --transform-bg-border-color: grey;
+  --transform-dial: 25px;
+  --transform-dial-bg-color: grey;
+  --transform-dial-border-color: white;
+  --transform-dial-hover-bg-color: #00aced;
+  --transform-dial-bg-active-color: #0192c7;
+  --control-panel-border-color: #f0f0f0;
+  --control-panel-bg-color: #fafafa;
+}

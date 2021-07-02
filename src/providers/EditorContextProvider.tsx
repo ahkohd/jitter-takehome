@@ -1,26 +1,36 @@
 import React, { createContext, Dispatch, FC, useState } from "react";
+import TransformsAnchor from "types/TransformsAnchor";
 
-type EditorState = {};
+type EditorState = {
+  currentTransformsAnchor: TransformsAnchor;
+};
 
-interface EditorActions {}
+interface EditorActions {
+  setTransformsAnchor(newAnchor: TransformsAnchor): void;
+}
 
-export const EditorContext = createContext<[EditorState, EditorActions] | null>(
-  null
-);
-
-const initialState = {};
+const initialState: EditorState = {
+  currentTransformsAnchor: TransformsAnchor.TopLeft,
+};
 
 const actions = (
   state: EditorState,
   setState: Dispatch<React.SetStateAction<EditorState>>
 ): EditorActions => ({
-  increment() {
-    //
+  setTransformsAnchor(newAnchor) {
+    setState({ ...state, currentTransformsAnchor: newAnchor });
   },
 });
 
+export const EditorContext = createContext<[EditorState, EditorActions]>([
+  initialState,
+  actions(initialState, () => {
+    //
+  }),
+]);
+
 const EditorContextProvider: FC = (props): JSX.Element => {
-  const [state, setState] = useState<EditorState>([initialState, actions]);
+  const [state, setState] = useState<EditorState>(initialState);
 
   return (
     <EditorContext.Provider value={[state, actions(state, setState)]}>
