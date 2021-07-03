@@ -46,6 +46,7 @@ const Panel = styled.div`
       font-size: 0.95rem;
       text-align: center;
       cursor: default;
+      user-select: none;
 
       max-width: 80%;
       margin: unset;
