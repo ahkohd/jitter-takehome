@@ -8,6 +8,8 @@ const Canvas = (): JSX.Element => {
   const animationRef = useRef<number>();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const angle = useRef<number>(0);
+  const animationDuration = useRef<number>(3);
+  const timer = useRef<number>(0);
 
   const drawOnEachFrame = useCallback(() => {
     if (canvasRef.current) {
@@ -48,10 +50,16 @@ const Canvas = (): JSX.Element => {
       angle.current += 0.04;
     }
 
-    animationRef.current = requestAnimationFrame(drawOnEachFrame);
+    // decide if to stop or continue animation
+    if (new Date().getSeconds() <= timer.current) {
+      animationRef.current = requestAnimationFrame(drawOnEachFrame);
+    } else {
+      cancelAnimationFrame(animationRef.current!);
+    }
   }, [currentTransformsAnchor]);
 
   useEffect(() => {
+    timer.current = new Date().getSeconds() + animationDuration.current;
     animationRef.current = requestAnimationFrame(drawOnEachFrame);
 
     return () => {
