@@ -10,7 +10,7 @@ interface EditorActions {
 }
 
 const initialState: EditorState = {
-  currentTransformsAnchor: TransformsAnchor.TopLeft,
+  currentTransformsAnchor: TransformsAnchor.Center,
 };
 
 const actions = (
