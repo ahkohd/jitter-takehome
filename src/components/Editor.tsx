@@ -17,8 +17,7 @@ const Editor = () => {
 export default Editor;
 
 const Section = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;

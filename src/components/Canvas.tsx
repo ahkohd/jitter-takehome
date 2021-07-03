@@ -74,13 +74,20 @@ const Canvas = (): JSX.Element => {
 export default Canvas;
 
 const CanvasContainer = styled.div`
-  flex: 1;
   height: 100%;
+  width: 100%;
   display: flex;
   background: var(--canvas-container-bg-color);
+  place-content: center;
+  place-items: center;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   canvas {
-    margin: auto;
     background: white;
   }
 `;

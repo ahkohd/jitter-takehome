@@ -7,9 +7,14 @@ import TransformDial from "./TransformDial";
 interface TransformBoxProps {
   width?: string | number;
   height?: string | number;
+  className?: string;
 }
 
-const TransformBox = ({ height, width }: TransformBoxProps): JSX.Element => {
+const TransformBox = ({
+  height,
+  width,
+  className,
+}: TransformBoxProps): JSX.Element => {
   const [{ currentTransformsAnchor }, actions] = useContext(EditorContext);
 
   const handleChangeAnchor = (anchor: TransformsAnchor) => {
@@ -17,7 +22,7 @@ const TransformBox = ({ height, width }: TransformBoxProps): JSX.Element => {
   };
 
   return (
-    <Box className="transform_box" style={{ width, height }}>
+    <Box className={`transform_box ${className}`} style={{ width, height }}>
       <div className="transform_box__bg"></div>
       <TransformDial
         className="transform_box__dial transform_box__dial--top_left"
