@@ -5,6 +5,7 @@
   --transform-dial-border-color: white;
   --transform-dial-hover-bg-color: #00aced;
   --transform-dial-bg-active-color: #0192c7;
-  --control-panel-border-color: #f0f0f0;
-  --control-panel-bg-color: #fafafa;
+  --control-panel-border-color: white;
+  --control-panel-bg-color: white;
+  --canvas-container-bg-color: #e5e5e5;
 }
