@@ -1,14 +1,7 @@
+import styled from "styled-components";
 import EditorContextProvider from "providers/EditorContextProvider";
 import Canvas from "./Canvas";
 import ControlPanel from "./ControlPanel/ControlPanel";
-import styled from "styled-components";
-
-const Section = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-`;
 
 const Editor = () => {
   return (
@@ -22,3 +15,10 @@ const Editor = () => {
 };
 
 export default Editor;
+
+const Section = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+`;
