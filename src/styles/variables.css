@@ -1,4 +1,5 @@
 :root {
+  --light-bg-color: white;
   --transform-bg-border-color: rgb(196, 196, 196);
   --transform-dial: 25px;
   --transform-dial-bg-color: grey;
@@ -7,4 +8,7 @@
   --transform-dial-bg-active-color: #0192c7;
   --control-panel-bg-color: white;
   --canvas-container-bg-color: #e5e5e5;
+  --preferred-border-color: rgba(0, 0, 0, 0.1);
+  --preferred-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  --control-panel-fg-color: #aaaaaa;
 }

@@ -56,6 +56,6 @@ const CanvasContainer = styled.div`
   }
 
   canvas {
-    background: white;
+    background: var(--light-bg-color);
   }
 `;

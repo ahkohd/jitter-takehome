@@ -42,7 +42,7 @@ const Panel = styled.div`
     place-items: center;
     background: var(--control-panel-bg-color);
     border-radius: 10px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--preferred-shadow);
 
     width: 280px;
     min-width: 280px;
@@ -59,7 +59,7 @@ const Panel = styled.div`
 
     &__header {
       padding: 11px 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid var(--preferred-border-color);
       width: 100%;
       font-weight: 600;
 
@@ -72,7 +72,7 @@ const Panel = styled.div`
     }
 
     &__label {
-      color: #aaa;
+      color: var(--control-panel-fg-color);
       text-align: center;
       font-weight: 500;
 
