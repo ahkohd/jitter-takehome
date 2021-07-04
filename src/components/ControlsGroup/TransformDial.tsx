@@ -8,7 +8,11 @@ interface TransformDialProps {
 
 const TransformDial = styled.button<TransformDialProps>`
   width: ${({ width }) => width};
+  min-width: ${({ width }) => width};
+  max-width: ${({ width }) => width};
   height: ${({ height }) => height};
+  min-height: ${({ height }) => height};
+  max-height: ${({ height }) => height};
   border-radius: 50%;
   background-color: var(
     ${({ isActive }) =>
