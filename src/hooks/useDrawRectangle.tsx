@@ -50,7 +50,7 @@ export const useDrawRectangle = ({
       ctx.fillRect(rX, rY, width, height);
     }
 
-    // decide if to stop or continue animation
+    // decide to stop or continue animation
     if (new Date().getSeconds() <= timer.current) {
       animationRef.current = requestAnimationFrame(drawOnEachFrame);
     } else {
