@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import { EditorContext } from "providers/EditorContextProvider";
 import styled from "styled-components";
 import { useDrawRectangle } from "hooks/useDrawRectangle";
+import pointer from "assets/pointer.svg";
 
 const Canvas = (): JSX.Element => {
   const [{ currentTransformsAnchor: transformsAnchor }] =
@@ -48,6 +49,7 @@ const CanvasContainer = styled.div`
   place-items: center;
   overflow: scroll;
   scrollbar-width: none;
+  cursor: url(${pointer}), auto;
 
   &::-webkit-scrollbar {
     display: none;
