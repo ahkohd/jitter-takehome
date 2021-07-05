@@ -1,7 +1,6 @@
 :root {
   --light-bg-color: white;
   --transform-bg-border-color: rgb(196, 196, 196);
-  --transform-dial: 25px;
   --transform-dial-bg-color: grey;
   --transform-dial-border-color: white;
   --transform-dial-hover-bg-color: #00aced;
